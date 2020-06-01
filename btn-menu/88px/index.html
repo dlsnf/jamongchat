@@ -1,0 +1,254 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<title>테스트</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0, user-scalable=yes" >
+		<meta name="format-detection" content="telephone=no">
+		<script src="js/jquery-1.11.0.min.js"></script>
+		<script src="js/masonry.pkgd.min.js"></script>
+
+		<script src="js/jquery.wm-zoom-1.0.min.js"></script>
+		<link rel="stylesheet" href="css/jquery.wm-zoom-1.0.css">
+
+		<link rel="stylesheet" href="css/main.css">
+		
+		<script>
+			var menu_on = false;
+       		function menu_click()
+       		{
+       			if( menu_on == false)
+       			{
+       				$("body").addClass("menu-open");
+       				$(".status").text("상태 : ON");
+       				menu_on = true;
+					$("body").css({'overflow':'hidden'});
+					//모바일에서 버그 방지
+					$(".menu").css({'overflow-y':'auto'});
+       			}else{
+       				$("body").removeClass("menu-open");
+       				$(".status").text("상태 : OFF");
+       				menu_on = false;
+					$("body").css({'overflow':'auto'});
+					//모바일에서 버그 방지
+					setTimeout(function(){
+						$(".menu").css({'overflow-y':'hidden'});
+					},800);
+       			}
+       		}
+
+
+			$(window).ready(function(){
+				onInitScrollAppearance($(this).find('.detect-inview'));
+				
+				     var $grid = $('.grid').masonry({
+						itemSelector: '.grid-item',
+						columnWidth: 10
+					  });
+
+					  $grid.on( 'click', '.grid-item', function() {
+						// change size of item via class
+						$( this ).toggleClass('grid-item--gigante');
+						// trigger layout
+						$grid.masonry();
+					  });
+
+/*
+					  $('#zoom_01').elevateZoom({
+						zoomWindowFadeIn: 300,
+						zoomWindowFadeOut: 300
+						   }); 
+						   */
+						 $('.my-zoom-1').WMZoom({
+					config : {
+        stageW : 500,
+        stageH : 400,
+        inner  : false,
+        position : 'right', // [top, right, bottom, left]
+        margin : 10
+    }
+				});
+  
+
+			});
+
+			$(window).scroll(center);
+
+			function center()
+			{
+				scrollVisible($("body").find('.detect-inview'),$(this).scrollTop());
+			}
+
+			//첫 시작때 나오는방법
+			var onInitScrollAppearance = function (elements) {
+				var wH = $(window).height();
+				var count = 0;
+				elements.each(function () {
+					var el = $(this);
+					count += 100;
+					var elOffset = el.offset().top;
+					if (elOffset < wH) {
+						setTimeout(function () {
+							el.addClass('visible');
+						}, count);
+					}
+				});
+			}
+
+			//스크롤할때 나오는방법
+			var scrollVisible = function (elements, toppx) {
+
+				var wH = $(window).height();
+				var toppxWh = toppx + wH;
+				var count = 0;
+
+				elements.each(function () {
+					
+					var el = $(this);
+					
+					//이미 활성화 된것들은 무시
+					if( el.hasClass('visible') )
+					{
+						
+					}else{
+						count += 100;
+						var elOffset = el.offset().top;					
+						if (elOffset < toppxWh) {
+							setTimeout(function () {
+								el.addClass('visible');
+							}, count);
+						}
+					}
+					
+
+				});
+
+			}
+
+		</script>
+
+
+	 </head>
+	 <body>
+
+<div class="all-wrap">
+	<div class="btn-menu" onclick="menu_click();">
+	
+		<div class="btn-menu_i">
+		
+			<div class="btn-menu_ii">
+				<div class="btn-menu__line-1"></div>
+				<div class="btn-menu__line-2"></div>
+				<div class="btn-menu__line-3"></div>
+			</div>
+			
+		</div>
+		
+	</div><!-- btn-menu -->
+	
+	<!-- <div class="status">상태 : OFF</div> -->
+
+
+	<div class="menu">
+		<div class="content row">
+			<div class="block" style="transition-delay: 0ms;"><h1>Home</h1></div>
+			<div class="block" style="transition-delay: 100ms;"><h1>About</h1></div>
+			<div class="block" style="transition-delay: 200ms;"><h1>Project</h1></div>
+			<div class="block" style="transition-delay: 300ms;"><h1>News</h1></div>
+			<div class="block" style="transition-delay: 400ms;"><h1>Contacts</h1></div>
+			<div class="block" style="transition-delay: 500ms;"><h1>Facebook</h1></div>
+			<div class="block" style="transition-delay: 600ms;"><h1>Twitter</h1></div>
+			<div class="block" style="transition-delay: 700ms;"><h1>Blog</h1></div>
+		</div>
+	</div><!-- menu -->
+
+
+<div class="image-zoom">
+	<div class="wm-zoom-container my-zoom-1">
+		<div class="wm-zoom-box">
+			<img src="images/IMG_5292.png" width="300px" class="wm-zoom-default-img" alt="alternative text" data-hight-src="images/IMG_5292_2.png" data-loader-src="images/loader.gif">
+		</div>
+	</div>
+	이미지 확대보기
+</div>
+
+
+<script>
+    
+</script>
+
+	<div class="art">
+		<div class="detect-inview"><span class="art-title">TITLE<span></div>
+		<div class="detect-inview"><span class="art-title">TITLE<span></div>
+		<div class="detect-inview"><span class="art-title">TITLE<span></div>
+		<div class="detect-inview"><span class="art-title">TITLE<span></div>
+		<div class="detect-inview"><span class="art-title">TITLE<span></div>
+		<div class="detect-inview"><span class="art-title">TITLE<span></div>
+		<div class="detect-inview"><span class="art-title">TITLE<span></div>
+		<div class="detect-inview"><span class="art-title">TITLE<span></div>
+		<div class="detect-inview"><span class="art-title">TITLE<span></div>
+		<div class="detect-inview"><span class="art-title">TITLE<span></div>
+		<div class="detect-inview"></div>
+		<div class="detect-inview"></div>
+		<div class="detect-inview"></div>
+		<div class="detect-inview"></div>
+		<div class="detect-inview"></div>
+		<div class="detect-inview"></div>
+		<div class="detect-inview"></div>
+		<div class="detect-inview"></div>
+		<div class="detect-inview"></div>
+		<div class="detect-inview"></div>
+		<div class="detect-inview"></div>
+		<div class="detect-inview"></div>
+		<div class="detect-inview"></div>
+		<div class="detect-inview"></div>
+		<div class="detect-inview"></div>
+		<div class="detect-inview"></div>
+		<div class="detect-inview"></div>
+		<div class="detect-inview"></div>
+		<div class="detect-inview"></div>
+		<div class="detect-inview"></div>
+		<div class="detect-inview"></div>
+		<div class="detect-inview"></div>
+		<div class="detect-inview"></div>
+		<div class="detect-inview"></div>
+		<div class="detect-inview"></div>
+		<div class="detect-inview"></div>
+		<div class="detect-inview"></div>
+		<div class="detect-inview"></div>
+		<div class="detect-inview"></div>
+		<div class="detect-inview"></div>
+		<div class="detect-inview"></div>
+		<div class="detect-inview"></div>
+	</div>
+
+<!--
+	<div class="grid" style="display:">
+	  <div class="grid-item"></div>
+	  <div class="grid-item grid-item--width2 grid-item--height2"></div>
+	  <div class="grid-item grid-item--height3"></div>
+	  <div class="grid-item grid-item--height2"></div>
+	  <div class="grid-item grid-item--width3"></div>
+	  <div class="grid-item"></div>
+	  <div class="grid-item"></div>
+	  <div class="grid-item grid-item--height2"></div>
+	  <div class="grid-item grid-item--width2 grid-item--height3"></div>
+	  <div class="grid-item"></div>
+	  <div class="grid-item grid-item--height2"></div>
+	  <div class="grid-item"></div>
+	  <div class="grid-item grid-item--width2 grid-item--height2"></div>
+	  <div class="grid-item grid-item--width2"></div>
+	  <div class="grid-item"></div>
+	  <div class="grid-item grid-item--height2"></div>
+	  <div class="grid-item"></div>
+	  <div class="grid-item"></div>
+	  <div class="grid-item grid-item--height3"></div>
+	  <div class="grid-item grid-item--height2"></div>
+	  <div class="grid-item"></div>
+	  <div class="grid-item"></div>
+	  <div class="grid-item grid-item--height2"></div>
+	</div>
+-->
+</div><!-- all-wrap -->
+	</body>
+</html>

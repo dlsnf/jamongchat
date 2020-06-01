@@ -1,0 +1,349 @@
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+   CSS RESET
+*/
+div{
+display:block;
+}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+a:link    {text-decoration:none; color: black;}
+a:visited {text-decoration:none; color: black;}
+a:active  {text-decoration:none; color: black;}
+a:hover  {text-decoration:none; color: black;}
+
+.bg{
+
+position:absolute;
+z-index:1000;
+width:100%;
+height:100%;
+background:#2d2d2d;
+
+}
+
+/*
+	웹폰트
+*/	
+/*
+	@font-face{
+	font-family:"BebasNeue";
+	src:url('../font/BebasNeue.eot');
+	src:url('../font/BebasNeue.eot?#iefix') format('opentype'),
+		 url('../font/BebasNeue.woff') format('woff'),
+		 url('../font/BebasNeue.otf') format('opentype');
+	src:local(※), url('../font/BebasNeue.woff') format('woff');
+	font-style: normal;
+	font-weight: lighter;
+}
+	@font-face{
+	font-family:"steelfish";
+	src:url('../font/SteelfishRg-Regular.eot');
+	src:url('../font/SteelfishRg-Regular.eot?#iefix') format('opentype'),
+	url('../font/steelfishrg.woff') format('woff'),
+	url('../font/steelfishrg.ttf') format('truetype');
+	src:local(※), url('../font/steelfishrg.woff') format('woff');
+	font-style: normal;
+	font-weight: normal;
+}
+*/
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  src: url('../font/NanumGothic-Regular.ttf');
+}
+
+
+
+/*custom_scroll
+::-webkit-scrollbar {
+     width:6px;
+	 height:6px;
+	 background-color:white;
+}
+::-webkit-scrollbar-track-piece  {
+   	background-color:rgba(255, 0, 0, 0.0);
+}
+::-webkit-scrollbar-thumb {
+   background-color:rgb(243,112,33);
+}
+*/
+
+/*project_custom_scroll*/
+/*
+::-webkit-scrollbar {
+     width:8px;
+	 height:10px;
+	 background:#000000;
+}
+::-webkit-scrollbar-track-piece  {
+   	background-color:rgba(255, 0, 0, 0.0);
+}
+::-webkit-scrollbar-thumb {
+	background-color:#808080
+}
+
+::-webkit-scrollbar-thumb:vertical 
+{
+    height: 50px;
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%, #B0B0B0), color-stop(100%, #808080));
+    border: 1px solid #808080;
+    border-top: 1px solid #808080;
+	border-right: 1px solid #808080;
+    border-left: 1px solid #808080; 
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+
+::-webkit-scrollbar-thumb:horizontal 
+{
+    width: 50px;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #B0B0B0), color-stop(100%, #808080));
+    border: 1px solid #808080;
+    border-top: 1px solid #808080;
+	border-right: 1px solid #808080;
+    border-left: 1px solid #808080; 
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}*/
+
+html{ }
+body{ 
+	
+    line-height: 1;
+	overflow-y:scroll;
+	overflow-x:auto;
+	background-color: #e9eaed;
+
+/* IE 스크롤바 */
+/* SCROLLBAR-FACE-COLOR: #808080; 스크롤바 */
+/* SCROLLBAR-HIGHLIGHT-COLOR: #000000; 뒷배경 */
+/* SCROLLBAR-SHADOW-COLOR: #2d2d2d;  스크롤바 테두리 */
+/* SCROLLBAR-ARROW-COLOR: #fff; 화살표버튼 */
+}
+
+
+
+BODY,TD,SELECT,input,DIV,form,TEXTAREA,center,option,pre,blockquote {font-family:굴림;font-size:12pt;color:#555555;}
+/*A:link    {color:#fff;text-decoration:none;}
+A:visited {color:#fff;text-decoration:none;}
+A:active  {color:#fff;text-decoration:none;}
+A:hover  {color:gray;text-decoration:none;}*/
+
+*{padding:0; margin:0; }
+
+ul,li{list-style:none; }
+
+/*드래그 색깔*/
+*::selection { background:rgb(247,147,30); color:#fff; }
+*::-moz-selection { background:rgb(247,147,30); color:#fff; }
+
+
+.all-wrap{
+
+position: relative;
+min-width: 760px;
+}
+
+.top{
+z-index:9999;
+position: relative;
+top:0;
+background:rgb(247,147,30);
+/*
+background:rgb(243,112,33);
+*/
+width: 100%;
+height:30px;
+padding:5px 0;
+border-bottom: 1px solid #e08434;
+-webkit-box-shadow: 0 2px 2px -2px rgba(0, 0, 0, .52);
+box-shadow: 0 2px 2px -2px rgba(0, 0, 0, .52);
+border-radius:0px;
+}
+
+.top2{
+z-index:3;
+display:none;
+position:relative;
+width:100%;
+height:30px;
+padding-top:5px;
+padding-bottom:5px;
+}
+/*
+.top_group{
+height:90px;
+width: 1000px;
+margin: 0 auto;
+border-radius:3px;
+border: 5px solid rgb(130,130,130);
+-webkit-transition: all 0.5s ease;
+}
+
+.top_group:hover {
+border: 5px solid rgb(245,245,245);
+-webkit-transition: all 0.3s ease;
+}
+
+.top_group ul{
+margin-top:24px;
+}
+
+.top_group ul li{
+float:right;
+margin-right:23px;
+font-size:36px;
+}
+
+.top_group ul li a{
+color: rgb(220,220,220);
+text-decoration:none;
+-webkit-transition: all 0.5s ease;
+font-family: 'Oxygen', sans-serif;
+font-weight:700;
+letter-spacing:1.3px;
+position:relative;
+}
+
+.top_group ul li a:hover{
+color: rgb(247,147,30);
+-webkit-transition: all 0.3s ease;
+bottom:2px;
+}
+
+.top_group ul li a:active{
+color:#f15a22;
+}*/
+
+.center{
+position: relative;
+width: 100%;
+overflow:auto;
+margin-top:10px;
+margin-bottom:10px;
+}
+
+.content{
+background-color: #fff;
+width: 600px;
+padding:10px;
+margin: 10px auto;
+border: 1px solid;
+border-color: #e9eaed #dfe0e4 #d0d1d5;
+border-radius:3px;
+-webkit-border-radius: 3px;
+}
+
+.content:hover{
+border-color:rgb(247,147,30);
+}
+
+.content_load{
+opacity:0.0;
+}
+
+.info{
+position: relative;
+width:90%;
+height:40px;
+padding:10px;
+}
+
+.info img{
+float:left;
+}
+.info span{
+float:left;
+line-height:1.2;
+padding:2px;
+padding-left:10px;
+}
+
+.text{
+position: relative;
+word-break: break-all; 
+width:580px;
+padding:10px;
+}
+
+.photo{
+width:600px;
+height:400px;
+-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+cursor:pointer;
+}
+
+.photo img{
+-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+cursor:pointer;
+}
+
+.footer{
+position: relative;
+width: 100%;
+background-color: #e9eaed;
+}
+
+.footer_group{
+border:2px solid rgb(247,147,30);
+width: 1000px;
+margin: 0 auto;
+padding:20px;
+margin-bottom:20px;
+border-radius:10px;
+}
+
+.company_a{
+	color:#fff;
+	font:14px "나눔고딕",'Nanum Gothic',sans-serif;
+	font-weight:bold;
+	-webkit-transition: color 0.3s, -webkit-transform 0.3s; 
+    transition: color 0.3s, transform 0.3s;
+}
+
+.company_a:hover{
+	color:rgb(245,130,32);
+}

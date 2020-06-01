@@ -1,0 +1,279 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+   CSS RESET
+
+   JamongSoft - RGB : 흰색(#fff) / 회색(#2d2d2d) / 오렌지색 rgb(243,112,33) , rgb(245,130,32)
+*/
+
+input[type=checkbox] {
+vertical-align: middle;
+}
+
+h2 {
+display: block;
+font-size: 1.5em;
+margin-top:0.83em;
+margin-bottom:0.83em;
+-webkit-margin-before: 0.83em;
+-webkit-margin-after: 0.83em;
+-webkit-margin-start: 0px;
+-webkit-margin-end: 0px;
+font-weight: bold;
+}
+
+
+.sing_up{
+position:relative;
+border-radius:5px;
+border:1px solid rgba(0,0,0,0.0);
+margin:0px;
+padding:0px;
+margin-top:35px;
+}
+
+.sing_up_nav{
+width:800px;
+height:56px;
+display: table;
+border-radius:5px;
+border:1px solid black;
+background:white;
+}
+
+.sing_up_nav ul{
+display: table-cell;
+vertical-align: middle;
+text-align: center;
+
+width:100%;
+height:100%;
+
+}
+
+.sing_up_nav ul li{
+position: relative;
+display: inline-block;
+float:left;
+width:200px;
+font:20px "나눔고딕",'Nanum Gothic',sans-serif;
+font-weight:bold;
+}
+
+.sing_up_nav ul li span{
+color:#2d2d2d;
+font:14px "나눔고딕",'Nanum Gothic',sans-serif;
+font-weight:bold;
+}
+
+.select{
+color:rgba(245,130,32,1.0);
+}
+
+.title{
+font:18px "나눔고딕",'Nanum Gothic',sans-serif;
+font-weight:bold;
+margin-top: 30px;
+padding-left:10px;
+margin-bottom: 10px;
+}
+
+.sing_up .text{
+font-size: 13px;
+height: 90px;
+padding: 20px;
+overflow: auto;
+color: #808080;
+}
+
+.sing_up .box{
+width:760px;
+height: 90px;
+line-height: 22px;
+border: 1px solid #ccc;
+background:white;
+}
+
+.sing_up .text h2{
+color: #363636;
+font-size: 15px;
+letter-spacing: -1px;
+border-bottom: none;
+}
+
+.check{
+margin-top: 10px;
+font-size: 13px;
+text-align: right;
+}
+
+.check label{
+vertical-align: middle;
+}
+
+.btn-group {
+margin-top: 30px;
+  margin-bottom: 30px;
+text-align: center;
+}
+
+.btn-check{
+cursor:pointer;
+display: inline-block;
+margin-left: 11px;
+font:18px "나눔고딕",'Nanum Gothic',sans-serif;
+font-weight: 500;
+border: 1px solid #aaa;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+border-radius: 5px;
+outline: none;
+text-align: center;
+color: #555;
+letter-spacing: -1px;
+font-size: 15px;
+padding: 10px;
+background-color: #fdfdfd;
+vertical-align: middle;
+
+}
+
+.btn-check a{
+
+}
+
+
+a.btn {
+font:18px "나눔고딕",'Nanum Gothic',sans-serif;
+font-weight:bold;
+border: 1px solid #aaa;
+display: inline-block;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+border-radius: 5px;
+outline: none;
+text-align: center;
+color: #555;
+letter-spacing: -1px;
+font-size: 15px;
+font-weight: bold;
+padding: 13px 25px 13px 25px;
+background-color: #fdfdfd;
+}
+
+.sign_up_form{
+border-top:1px solid black;
+}
+
+.sign_up_form table{
+width: 100%;
+margin-top: 29px;
+font-size: 13px;
+letter-spacing: -1px;
+border-spacing: 0;
+}
+
+table {
+display: table;
+border-collapse: separate;
+border-spacing: 2px;
+border-color: gray;
+}
+
+tbody {
+display: table-row-group;
+vertical-align: middle;
+border-color: inherit;
+}
+
+tr {
+display: table-row;
+vertical-align: inherit;
+border-color: inherit;
+}
+
+.sign_up_form th {
+font-weight: bold;
+text-align: left;
+vertical-align: top;
+width: 135px;
+padding-left: 15px;
+padding-bottom: 15px;
+padding-top: 14px;
+}
+
+.sign_up_form td {
+padding-bottom: 10px;
+}
+
+#sign_up_body .center input[type=text], input[type=password] {
+margin: 0;
+color: #444;
+vertical-align: middle;
+padding: 10px 10px 10px 10px;
+font-size: 13px;
+line-height: 17px;
+height: 17px;
+font-weight: normal;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+border-radius: 5px;
+outline: none;
+border: 1px solid #cfcfcf;
+}
+
+.sign_up_form td .desc {
+margin-top: 8px;
+font-size: 12px;
+letter-spacing: -1px;
+margin-bottom: 10px;
+color: #999;
+line-height: 1.5;
+}
+
+.chosen-select{
+
+position: relative;
+display: inline-block;
+vertical-align: middle;
+font-size: 13px;
+zoom: 1;
+overflow: hidden;
+padding: 0 0 0 8px;
+height: 39px;
+border: 1px solid #cfcfcf;
+border-radius: 5px;
+color: #b4b4b4;
+text-decoration: none;
+white-space: nowrap;
+line-height: 36px;
+letter-spacing: 0;
+}
+
+.error{
+text-align: center;
+color: #ff1a22;
+height: 15px;
+font-size: 13px;
+margin-top: 20px;
+margin-bottom: 20px;
+}
+
+.wellcome{
+display:block;
+margin-top:35px;
+font:68px "나눔고딕",'Nanum Gothic',sans-serif;
+font-weight:bold;
+text-align:center;
+}
+
+.wellcome_text{
+margin-top:35px;
+font:14px "나눔고딕",'Nanum Gothic',sans-serif;
+font-weight:bold;
+text-align:center;
+}
+
+.input_error{
+border-color:red !important;
+}

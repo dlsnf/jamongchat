@@ -1,0 +1,49 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<title>테스트</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, height=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=2.0, user-scalable=yes" >
+		<meta name="format-detection" content="telephone=no">
+		<script src="js/jquery-1.11.0.min.js"></script>
+		<link rel="stylesheet" href="css/main.css">
+		
+		<script>
+			var menu_on = false;
+       		function menu_click()
+       		{
+       			if( menu_on == false)
+       			{
+       				$("body").addClass("menu-open");
+       				$(".status").text("상태 : ON");
+       				menu_on = true;
+       			}else{
+       				$("body").removeClass("menu-open");
+       				$(".status").text("상태 : OFF");
+       				menu_on = false;
+       			}
+       		}
+		</script>
+
+
+	 </head>
+	 <body>
+
+	<div class="btn-menu" onclick="menu_click();">
+	
+		<div class="btn-menu_i">
+		
+			<div class="btn-menu_ii">
+				<div class="btn-menu__line-1"></div>
+				<div class="btn-menu__line-2"></div>
+				<div class="btn-menu__line-3"></div>
+			</div>
+			
+		</div>
+		
+	</div><!-- btn-menu -->
+	
+	<div class="status">상태 : OFF</div>
+
+	</body>
+</html>

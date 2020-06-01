@@ -1,0 +1,177 @@
+
+.light_box_black{
+	z-index:99994;
+	position:absolute;
+	overflow:hidden;
+	display:none;
+	background:black;
+	opacity:0.8;
+	cursor:pointer;
+	filter: alpha(opacity=80); /* ie 8~9 버전에서 투명도 */
+}
+.light_box_black2{
+	z-index:99999;
+	position:absolute;
+	display:none;
+	width:100%;
+	min-height:100%;
+	background:black;
+	opacity:0.0;
+	cursor:pointer;
+	filter: alpha(opacity=00); /* ie 8~9 버전에서 투명도 */
+}
+
+.light_box_div{
+position:absolute;
+width:100%;
+height:100%;
+}
+
+.light_box{
+margin:auto; z-index:999999; position:absolute; right:0; top:0; bottom:0; left:0;
+
+	width:30px;
+	height:30px;
+	background:url(../images/box_layering_Biography.png);
+	background-repeat: repeat;
+	background-size: cover;
+	background-position:center top !important;
+
+	padding:30px;
+
+	border-top-left-radius:30px;
+	border-bottom-right-radius:30px;
+
+	border-top-right-radius:5px;
+	border-bottom-left-radius:5px;
+
+	display:none;
+}
+.light_box_name{
+display:none;
+color: white;
+z-index: 99997;
+position: absolute;
+text-align: center;
+left: 30px;
+top: 0px;
+font-weight: bold;
+font-family: 'steelfish', sans-serif;
+font: 24px "steelfish",sans-serif;
+}
+
+.light_box_count{
+display:none;
+color: white;
+z-index: 99997;
+position: absolute;
+margin: auto;
+text-align: center;
+right: 0;
+left: 0;
+top: 1px;
+font-weight:bold;
+font-family: 'Nanum Gothic', sans-serif;
+font: 20px "Nanum Gothic",sans-serif;
+}
+
+.light_box_btn_close{
+	z-index:99998;
+	display:none;
+	position:absolute;
+	top: 10px;
+	right: 10px;
+	cursor:pointer;
+}
+
+.light_box_btn_left{
+	z-index:99997;
+	display:none;
+	position: absolute;
+	z-index: 9999;
+	text-align: center;
+	margin: auto;
+	left: 4px;
+	top: 0;
+	bottom: 0;
+	font-weight: bold;
+	font-size: 30px;
+	color: white;
+	cursor:pointer;
+}
+
+.light_box_btn_right{
+	z-index:99997;
+	display:none;
+	position: absolute;
+	text-align: center;
+	margin: auto;
+	right: 4px;
+	top: 0;
+	bottom: 0;
+	font-weight: bold;
+	font-size: 30px;
+	color: white;
+	cursor:pointer;
+}
+
+.light_box_group{
+position: relative;
+}
+
+.img_div{
+float:left;
+width:68%;
+min-height:700px;
+height:700px;
+display:none;
+position:absolute;
+}
+
+.light_box_img{
+position:absolute;
+	z-index:99996;
+	width:100%;
+	height: auto;
+}
+
+.text_div{
+position: relative;
+float:right;
+width:30%;
+min-height:700px;
+background:white;
+display:none;
+}
+
+.light_box_info{
+position: relative;
+height:40px;
+padding:10px;
+}
+
+.light_box_info_img{
+float:left;
+display:table;
+}
+.light_box_info_info{
+float:left;
+width: 194px;
+line-height:1.2;
+padding:2px;
+padding-left:10px;
+font: 1.0em "나눔고딕",'Nanum Gothic',sans-serif;
+}
+
+
+.light_box_content{
+position: relative;
+word-break: break-all;
+height:auto;
+overflow:auto;
+font: 1.0em "나눔고딕",'Nanum Gothic',sans-serif;
+padding-left:10px;
+padding-right:5px;
+padding-top:10px;
+padding-bottom:10px;
+}
